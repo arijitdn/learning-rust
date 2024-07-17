@@ -1,26 +1,17 @@
-enum IpAddrKind {
-    V4(u8, u8, u8, u8),
-    V6(String),
-}
-
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
-impl Message {
-    fn some_function() {
-        println!("Let's get rusty!");
-    }
-}
-
-struct IpAddr {
-    kind: IpAddrKind,
-    address: String,
-}
-
 fn main() {
-    let localhost = IpAddrKind::V4(127, 0, 0, 1);
+    // enum Option<T> {
+    //     Some(T),
+    //     None,
+    // }
+
+    let some_number = Some(5);
+    let some_string = Some("hi there");
+
+    let absent_number: Option<i32> = None;
+
+
+    let x: i8 = 5;
+    let y: Option<i8> = Some(8); // Or None
+
+    let sum = x + y.unwrap_or(0);
 }
